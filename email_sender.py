@@ -6,14 +6,14 @@ from pathlib import Path
 
 html = Template(Path('index.html').read_text())
 # Your credentials
-sender_email = 'pksai20044@gmail.com'
-app_password = 'becxbwcjlyzkmzyr'  # Replace with the new one
+sender_email = 'youremail'
+app_password = 'your app password'  # go to managae your google account and in  securtiy enable 2fa and search app password and create a temporary password
 
 # Message setup (example)
 msg = MIMEMultipart()
 msg['From'] = sender_email
-msg['To'] = 'sailakshman212005@gmail.com'  # Change this
-msg['Subject'] = 'YOU WON 100million dollars!!!'
+msg['To'] = 'sender-email'  # Change this
+msg['Subject'] = 'YOU WON 100!!!'
 msg.attach(MIMEText(html.substitute(name='Nathan Drake'), 'html'))
 
 # SMTP setup
